@@ -30,26 +30,44 @@ namespace DesignPatternsDemo
             var request = new PurchaseRequest() { Amount = 3500 };
 
             //未使用责任链
-            Console.WriteLine("-------------未使用责任链-------------");
-            var requstHandler = new PurchaseRequestHandler();
-            requstHandler.Handle(request);
+            {
+                Console.WriteLine("-------------未使用责任链-------------");
+                var requstHandler = new PurchaseRequestHandler();
+                requstHandler.Handle(request);
+            }
 
-            //责任链
-            Console.WriteLine("-------------使用责任链-------------");
-            PurchaseRequestDirectorHandler director = new PurchaseRequestDirectorHandler();
-            PurchaseRequestVicePresidentHandler vicePresident = new PurchaseRequestVicePresidentHandler();
-            PurchaseRequestPrisidentHandler prisident = new PurchaseRequestPrisidentHandler();
-            PurchaseRequestCongressHandler congress = new PurchaseRequestCongressHandler();
+            //责任链--接口
+            {
+                Console.WriteLine("-------------使用责任链--接口方式-------------");
+                PurchaseRequestDirectorHandler director = new PurchaseRequestDirectorHandler();
+                PurchaseRequestVicePresidentHandler vicePresident = new PurchaseRequestVicePresidentHandler();
+                PurchaseRequestPrisidentHandler prisident = new PurchaseRequestPrisidentHandler();
+                PurchaseRequestCongressHandler congress = new PurchaseRequestCongressHandler();
 
-            director.SetNextHandler(vicePresident);
-            vicePresident.SetNextHandler(prisident);
-            prisident.SetNextHandler(congress);
+                director.SetNextHandler(vicePresident);
+                vicePresident.SetNextHandler(prisident);
+                prisident.SetNextHandler(congress);
 
-            director.Handle(request);
+                director.Handle(request);
+            }
+            //责任链--接口
+            {
+                Console.WriteLine("-------------使用责任链--抽象类方式-----------");
+                Structural.责任链.V3.PurchaseRequestDirectorHandler director = new Structural.责任链.V3.PurchaseRequestDirectorHandler();
+                Structural.责任链.V3.PurchaseRequestVicePresidentHandler vicePresident = new Structural.责任链.V3.PurchaseRequestVicePresidentHandler();
+                Structural.责任链.V3.PurchaseRequestPrisidentHandler prisident = new Structural.责任链.V3.PurchaseRequestPrisidentHandler();
+                Structural.责任链.V3.PurchaseRequestCongressHandler congress = new Structural.责任链.V3.PurchaseRequestCongressHandler();
+
+                director.SetNextHandler(vicePresident);
+                vicePresident.SetNextHandler(prisident);
+                prisident.SetNextHandler(congress);
+
+                director.Handle(request);
+            }
 
             #endregion 责任链
 
-    #endregion Structural
+            #endregion Structural
 
             Console.WriteLine("Hello World!");
         }

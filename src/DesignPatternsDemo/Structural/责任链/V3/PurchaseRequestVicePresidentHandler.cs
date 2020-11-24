@@ -3,18 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using DesignPatternsDemo.Structural.责任链.Model;
 
-namespace DesignPatternsDemo.Structural.责任链.V2
+namespace DesignPatternsDemo.Structural.责任链.V3
 {
-    public class PurchaseRequestVicePresidentHandler: IPurchaseRequestHandler
+    public class PurchaseRequestVicePresidentHandler: PurchaseRequestHandler
     {
-        private IPurchaseRequestHandler _nextHandler;
-
-        public void SetNextHandler(IPurchaseRequestHandler nextHandler)
-        {
-            _nextHandler = nextHandler;
-        }
-
-        public bool Handle(PurchaseRequest request)
+        public override bool Handle(PurchaseRequest request)
         {
             var result = false;
             if (request.Amount > 500)
