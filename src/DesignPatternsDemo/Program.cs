@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 using DesignPatternsDemo.Creational.单例模式;
+using DesignPatternsDemo.Creational.工厂模式.工厂模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V2;
 using DesignPatternsDemo.Structural.责任链.Model;
 using DesignPatternsDemo.Structural.责任链.V1;
 using DesignPatternsDemo.Structural.责任链.V2;
+using DesignPatternsDemo.Utility;
 
 namespace DesignPatternsDemo
 {
@@ -13,6 +15,9 @@ namespace DesignPatternsDemo
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World!");
+            Console.WriteLine();
+
             #region Behavioral
 
 
@@ -59,8 +64,44 @@ namespace DesignPatternsDemo
             //    var prod = ProductIncludeFactory.GetProduct("A");
             //    prod.Show();
             //}
-            #endregion
+            #endregion 简单工厂模式
 
+            #region 工厂模式
+            //{
+            //    //不同的log有不同的初始化条件，所以放到不同的factory里面，避免代码混淆
+            //    Console.WriteLine("-------------工厂模式 V1 default-------------");
+            //    ILoggerFactory factory = null;
+            //    factory = new DBLoggerFactory();
+            //    ILogger logger = factory.GetLogger();
+            //    logger.WriteLog();
+
+            //    factory = null;
+            //    factory = new FileLoggerFactory();
+            //    logger = factory.GetLogger();
+            //    logger.WriteLog();
+
+            //    Console.WriteLine("-------------工厂模式 V1 input-------------");
+            //    factory = null;
+            //    factory = new DBLoggerFactory();
+            //    logger = factory.GetLogger("Account");
+            //    logger.WriteLog();
+
+            //    factory = null;
+            //    factory = new FileLoggerFactory();
+            //    logger = factory.GetLogger("Account");
+            //    logger.WriteLog();
+            //}
+
+            //{
+            //    Console.WriteLine("-------------工厂模式 V2 从配置文件动态获取factory-------------");
+            //    var factoryName = ConfigProvider.GetConfigString("FactoryMethod:LoggerFactory");
+            //    var factoryType = "DesignPatternsDemo.Creational.工厂模式.工厂模式.V1." + factoryName;
+            //    var factory =  Activator.CreateInstance(Type.GetType(factoryType)) as ILoggerFactory;
+            //    var logger = factory.GetLogger("Account");
+            //    logger.WriteLog();
+            //}
+
+            #endregion 工厂模式
 
 
             #endregion Creational
@@ -113,8 +154,7 @@ namespace DesignPatternsDemo
 
             #endregion Structural
 
-            Console.WriteLine("Hello World!");
-            
+
         }
     }
 }
