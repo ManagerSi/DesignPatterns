@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <Folder Include="Behavioral\" />
-    <Folder Include="Creational\" />
+    <Folder Include="Creational\工厂模式\新文件夹\" />
   </ItemGroup>
 
 </Project>

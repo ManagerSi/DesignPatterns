@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using DesignPatternsDemo.Creational.单例模式;
+using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V1;
+using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V2;
 using DesignPatternsDemo.Structural.责任链.Model;
 using DesignPatternsDemo.Structural.责任链.V1;
 using DesignPatternsDemo.Structural.责任链.V2;
@@ -45,6 +47,21 @@ namespace DesignPatternsDemo
             //}
 
             #endregion 单例模式
+
+            #region 简单工厂模式
+            //{
+            //    Console.WriteLine("-------------简单工厂模式 1-------------");
+            //    var prod = SimpleProductFactory.GetProduct("A");
+            //    prod.Show();
+            //}
+            //{
+            //    Console.WriteLine("-------------简单工厂模式 2 prod 和 工厂方法整合在一起-------------");
+            //    var prod = ProductIncludeFactory.GetProduct("A");
+            //    prod.Show();
+            //}
+            #endregion
+
+
 
             #endregion Creational
 
@@ -97,6 +114,7 @@ namespace DesignPatternsDemo
             #endregion Structural
 
             Console.WriteLine("Hello World!");
+            
         }
     }
 }
