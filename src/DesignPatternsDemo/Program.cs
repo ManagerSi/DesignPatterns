@@ -96,15 +96,14 @@ namespace DesignPatternsDemo
 
             //{
             //    Console.WriteLine("-------------工厂模式 V2 从配置文件动态获取factory-------------");
-            //    var factoryName = ConfigProvider.GetConfigString("FactoryMethod:LoggerFactory");
+            //    var factoryName = ConfigProvider.GetConfigString("Creational:FactoryMethod:LoggerFactory");
             //    var factoryType = "DesignPatternsDemo.Creational.工厂模式.工厂模式.V1." + factoryName;
-            //    var factory =  Activator.CreateInstance(Type.GetType(factoryType)) as ILoggerFactory;
+            //    var factory = Activator.CreateInstance(Type.GetType(factoryType)) as ILoggerFactory;
             //    var logger = factory.GetLogger("Account");
             //    logger.WriteLog();
             //}
 
             #endregion 工厂模式
-
 
             #region 抽象工厂模式
             //产品族分类
@@ -118,8 +117,21 @@ namespace DesignPatternsDemo
             //    cb.Display();
             //    tf.Display();
             //}
-            
-            #endregion 单例模式
+
+            //{
+            //    Console.WriteLine("-------------抽象工厂模式 V2 从配置文件动态获取factory-------------");
+            //    var factoryName = ConfigProvider.GetConfigString("Creational:AbstractFactoryMethod:SkinFactory");
+            //    var factoryType = "DesignPatternsDemo.Creational.工厂模式.抽象工厂模式.V1." + factoryName;
+            //    var skinFactory = Activator.CreateInstance(Type.GetType(factoryType)) as ISkinFactory;
+            //    IButton bt = skinFactory.CreateButton();
+            //    IComboBox cb = skinFactory.CreateComboBox();
+            //    ITextField tf = skinFactory.CreateTextField();
+            //    bt.Display();
+            //    cb.Display();
+            //    tf.Display();
+            //}
+
+            #endregion 抽象工厂模式
 
             #endregion Creational
 
