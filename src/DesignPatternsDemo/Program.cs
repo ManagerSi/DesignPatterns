@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using DesignPatternsDemo.Creational.单例模式;
 using DesignPatternsDemo.Creational.工厂模式.工厂模式.V1;
+using DesignPatternsDemo.Creational.工厂模式.抽象工厂模式.V1;
+using DesignPatternsDemo.Creational.工厂模式.抽象工厂模式.V1.Model;
 using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V2;
 using DesignPatternsDemo.Structural.责任链.Model;
@@ -103,6 +105,21 @@ namespace DesignPatternsDemo
 
             #endregion 工厂模式
 
+
+            #region 抽象工厂模式
+            //产品族分类
+            //{
+            //    Console.WriteLine("-------------抽象工厂模式-------------");
+            //    ISkinFactory skinFactory = new SpringSkinFactory();
+            //    IButton bt = skinFactory.CreateButton();
+            //    IComboBox cb = skinFactory.CreateComboBox();
+            //    ITextField tf = skinFactory.CreateTextField();
+            //    bt.Display();
+            //    cb.Display();
+            //    tf.Display();
+            //}
+            
+            #endregion 单例模式
 
             #endregion Creational
 
