@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using DesignPatternsDemo.Creational.单例模式;
+using DesignPatternsDemo.Creational.原型模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.工厂模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.抽象工厂模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.抽象工厂模式.V1.Model;
@@ -132,6 +134,88 @@ namespace DesignPatternsDemo
             //}
 
             #endregion 抽象工厂模式
+
+            #region 原型模式
+            {
+                //Console.WriteLine("-------------原型模式 V1 浅拷贝(MemberwiseClone)-------------");
+                //Prototype prototype = new Prototype();
+                //prototype.PrototypeName = "name1";
+                //prototype.Address = new Creational.原型模式.V1.Model.Address() { Country = "中国", City = "上海" };
+                //var proto2 = prototype.Clone() as Prototype;
+
+                //prototype.Show();
+                //proto2.Show();
+                //Console.WriteLine($"prot1 == prot2:{prototype == proto2}");
+                //Console.WriteLine($"prot1.Address == prot2.Address:{prototype.Address == proto2.Address}");
+                //Console.WriteLine();
+            }
+
+            {
+                //Console.WriteLine("-------------原型模式 V1 深拷贝-------------");
+                //Prototype prototype = new Prototype();
+                //prototype.PrototypeName = "name1";
+                //prototype.Address = new Creational.原型模式.V1.Model.Address() { Country = "中国", City = "上海" };
+                //var proto2 = prototype.DeepCloneByBin(prototype);
+                //var proto3 = prototype.DeepCloneByXml(prototype);
+                //var proto4 = prototype.DeepCopyByReflection(prototype) as Prototype;
+                //var proto5 = prototype.DeepCopyByNewtonSoft(prototype);
+
+                //prototype.Show();
+                //proto2.Show();
+                //proto3.Show();
+                //proto4.Show();
+                //proto5.Show();
+                //Console.WriteLine($"prot1 == prot2:{prototype == proto2}");
+                //Console.WriteLine($"prot1 == prot3:{prototype == proto3}");
+                //Console.WriteLine($"prot1 == prot4:{prototype == proto4}");
+                //Console.WriteLine($"prot1 == prot5:{prototype == proto5}");
+                //Console.WriteLine($"prot1.Address == prot2.Address:{prototype.Address == proto2.Address}");
+                //Console.WriteLine($"prot1.Address == prot3.Address:{prototype.Address == proto3.Address}");
+                //Console.WriteLine($"prot1.Address == prot4.Address:{prototype.Address == proto4.Address}");
+                //Console.WriteLine($"prot1.Address == prot5.Address:{prototype.Address == proto5.Address}");
+            }
+
+            {
+                //Console.WriteLine("-------------原型模式 V1 深拷贝(测试)-------------");
+                //Prototype prototype = new Prototype();
+                //prototype.PrototypeName = "p copy test";
+                //prototype.Address = new Creational.原型模式.V1.Model.Address() { Country = "中国", City = "上海" };
+
+                //Stopwatch st = new Stopwatch();
+                //st.Start();
+                //for (int i = 0; i < 100000; i++)
+                //{
+                //    var copy = prototype.DeepCloneByBin(prototype);
+                //}
+                //st.Stop();
+                //Console.WriteLine($"DeepCloneByBin copy 100000 using {st.ElapsedMilliseconds} ms");
+
+                //st.Restart();
+                //for (int i = 0; i < 100000; i++)
+                //{
+                //    var copy = prototype.DeepCloneByXml(prototype);
+                //}
+                //st.Stop();
+                //Console.WriteLine($"DeepCloneByXml copy 100000 using {st.ElapsedMilliseconds} ms");
+
+                //st.Restart();
+                //for (int i = 0; i < 100000; i++)
+                //{
+                //    var copy = prototype.DeepCopyByNewtonSoft(prototype);
+                //}
+                //st.Stop();
+                //Console.WriteLine($"DeepCopyByNewtonSoft copy 100000 using {st.ElapsedMilliseconds} ms");
+
+                //st.Restart();
+                //for (int i = 0; i < 100000; i++)
+                //{
+                //    var copy = prototype.DeepCopyByReflection(prototype);
+                //}
+                //st.Stop();
+                //Console.WriteLine($"DeepCopyByReflection copy 100000 using {st.ElapsedMilliseconds} ms");
+            }
+
+            #endregion 原型模式
 
             #endregion Creational
 
