@@ -8,10 +8,14 @@ using DesignPatternsDemo.Creational.工厂模式.抽象工厂模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.抽象工厂模式.V1.Model;
 using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V1;
 using DesignPatternsDemo.Creational.工厂模式.简单工厂模式.V2;
+using DesignPatternsDemo.Creational.建造者模式.V2;
 using DesignPatternsDemo.Structural.责任链.Model;
 using DesignPatternsDemo.Structural.责任链.V1;
 using DesignPatternsDemo.Structural.责任链.V2;
 using DesignPatternsDemo.Utility;
+using ActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.ActorBuilder;
+using AngelActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.AngelActorBuilder;
+using DevilActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.DevilActorBuilder;
 
 namespace DesignPatternsDemo
 {
@@ -216,6 +220,28 @@ namespace DesignPatternsDemo
             }
 
             #endregion 原型模式
+
+            #region 建造者模式
+
+            //{
+            //    //actorBuilder 构造 目标对象
+            //    Console.WriteLine("-------------建造者模式 V1 actorBuilder-------------");
+            //    ActorBuilder ab = new AngelActorBuilder();
+            //    var actor = ab.GetActor();
+            //    actor.Show();
+            //    Console.WriteLine();
+            //}
+            //{
+            //    //actorBuilder 构造 目标对象
+            //    //actorController 控制 构造流程
+            //    Console.WriteLine("-------------建造者模式 V2 actorBuilder/actorController 控制流程-------------");
+            //    DesignPatternsDemo.Creational.建造者模式.V2.ActorBuilder ab = new DesignPatternsDemo.Creational.建造者模式.V2.DevilActorBuilder();
+            //    ActorController actorController = new ActorController(ab);
+            //    var actor = actorController.ConstructActor();
+            //    actor.Show();
+            //}
+
+            #endregion 建造者模式
 
             #endregion Creational
 
