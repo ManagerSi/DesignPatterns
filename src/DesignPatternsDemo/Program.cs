@@ -16,6 +16,7 @@ using DesignPatternsDemo.Utility;
 using ActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.ActorBuilder;
 using AngelActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.AngelActorBuilder;
 using DevilActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.DevilActorBuilder;
+using DesignPatternsDemo.Structural.适配器模式.对象适配器模式;
 
 namespace DesignPatternsDemo
 {
@@ -290,6 +291,52 @@ namespace DesignPatternsDemo
 
             #region Structural 结构性设计模式
 
+            #region 适配器模式
+
+            //{
+            //    Console.WriteLine("-------------适配器模式 V1 对象适配器-------------");
+            //    //被适配的对象
+            //    Adaptee adaptee = new Adaptee();
+            //    //适配器
+            //    Target target = new Adapter(adaptee);
+            //    target.DoSomething();
+            //    target.DoSomething2();
+            //}
+            //{
+            //    Console.WriteLine("-------------适配器模式 V2 类适配器-------------");
+            //    //适配器
+            //    Structural.适配器模式.类适配器模式.Target target = new Structural.适配器模式.类适配器模式.Adapter();
+            //    target.DoSomething();
+            //    target.DoSomething2();
+            //}
+
+            //{
+            //    Console.WriteLine("-------------适配器模式 V3 双向适配器-------------");
+            //    Structural.适配器模式.双向适配器模式.Target target = new Structural.适配器模式.双向适配器模式.Target();
+            //    Structural.适配器模式.双向适配器模式.Adaptee adaptee = new Structural.适配器模式.双向适配器模式.Adaptee();
+
+            //    //适配器
+            //    Structural.适配器模式.双向适配器模式.Adapter adapter = new Structural.适配器模式.双向适配器模式.Adapter();
+            //    adapter.SetAdaptee(adaptee);
+            //    adapter.SetTarget(target);
+
+            //    adapter.DoAdapterSomething();
+            //    adapter.DoTargetSomething2();
+            //}
+
+            //{
+            //    Console.WriteLine("-------------适配器模式 V4 缺省适配器-------------");
+            //    // target 方法较多，但并非全都需要，定义AbstractAdapter使用默认实现所有方法
+            //    // 定义adapter类继承AbstractAdapter类，覆写需要的方法
+                
+            //    //被适配的对象
+            //    Structural.适配器模式.缺省适配器模式.Adaptee adaptee = new Structural.适配器模式.缺省适配器模式.Adaptee();
+            //    //适配器
+            //    Structural.适配器模式.缺省适配器模式.Target target = new Structural.适配器模式.缺省适配器模式.Adapter(adaptee);
+            //    target.DoSomething();
+            //    target.DoSomething2();
+            //}
+            #endregion 适配器模式
 
 
             #endregion Structural
