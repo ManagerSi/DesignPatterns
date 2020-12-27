@@ -1,36 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DesignPatternsDemo.Structural.责任链.Model;
+using DesignPatternsDemo.Behavioral.责任链.Model;
 
-namespace DesignPatternsDemo.Structural.责任链.V3
+namespace DesignPatternsDemo.Behavioral.责任链.V3
 {
-    public class PurchaseRequestDirectorHandler: PurchaseRequestHandler
+    public class PurchaseRequestVicePresidentHandler: PurchaseRequestHandler
     {
         public override bool Handle(PurchaseRequest request)
         {
             var result = false;
-            if (request.Amount > 0)
+            if (request.Amount > 500)
             {
                 //主管审批
-                result = HandleByDirector(request);
+                result = HandleByVicePresident(request);
 
                 //下一级审批
                 if (result && _nextHandler != null)
                     return _nextHandler.Handle(request);
             }
-           
+
             return result;
         }
 
         /// <summary>
-        /// 主管审批
+        /// 副董事长审批
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        private bool HandleByDirector(PurchaseRequest request)
+        private bool HandleByVicePresident(PurchaseRequest request)
         {
-            Console.WriteLine("HandleByDirector");
+            Console.WriteLine("HandleByVicePresident");
             return true;
         }
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPatternsDemo.Structural.责任链.Model
+namespace DesignPatternsDemo.Behavioral.责任链.Model
 {
     public class PurchaseRequest
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DesignPatternsDemo.Structural.责任链.Model;
+using DesignPatternsDemo.Behavioral.责任链.Model;
 
-namespace DesignPatternsDemo.Structural.责任链.V2
+namespace DesignPatternsDemo.Behavioral.责任链.V2
 {
     public interface IPurchaseRequestHandler
     {

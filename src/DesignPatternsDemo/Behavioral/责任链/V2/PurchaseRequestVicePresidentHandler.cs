@@ -1,11 +1,11 @@
-﻿using DesignPatternsDemo.Structural.责任链.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DesignPatternsDemo.Behavioral.责任链.Model;
 
-namespace DesignPatternsDemo.Structural.责任链.V2
+namespace DesignPatternsDemo.Behavioral.责任链.V2
 {
-    public class PurchaseRequestCongressHandler: IPurchaseRequestHandler
+    public class PurchaseRequestVicePresidentHandler: IPurchaseRequestHandler
     {
         private IPurchaseRequestHandler _nextHandler;
 
@@ -17,10 +17,10 @@ namespace DesignPatternsDemo.Structural.责任链.V2
         public bool Handle(PurchaseRequest request)
         {
             var result = false;
-            if (request.Amount > 3000)
+            if (request.Amount > 500)
             {
                 //主管审批
-                result = HandleByCongress(request);
+                result = HandleByVicePresident(request);
 
                 //下一级审批
                 if (result && _nextHandler != null)
@@ -31,13 +31,13 @@ namespace DesignPatternsDemo.Structural.责任链.V2
         }
 
         /// <summary>
-        /// 董事会审批
+        /// 副董事长审批
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        private bool HandleByCongress(PurchaseRequest request)
+        private bool HandleByVicePresident(PurchaseRequest request)
         {
-            Console.WriteLine("HandleByCongress");
+            Console.WriteLine("HandleByVicePresident");
             return true;
         }
     }
