@@ -20,6 +20,8 @@ using ActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.ActorBuild
 using AngelActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.AngelActorBuilder;
 using DevilActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.DevilActorBuilder;
 using DesignPatternsDemo.Structural.适配器模式.对象适配器模式;
+using DesignPatternsDemo.Structural.组合模式.V1;
+using DesignPatternsDemo.Structural.组合模式.V1.LeafNode;
 
 namespace DesignPatternsDemo
 {
@@ -373,6 +375,76 @@ namespace DesignPatternsDemo
             //    Console.WriteLine("test normal color");
             //}
             #endregion  桥接模式
+
+            #region 组合模式
+
+            //{
+            //    Console.WriteLine("-------------组合模式 V1 文件夹/文件杀毒-------------");
+            //    AbstractFile folder1 = new Folder("foder1");
+            //    AbstractFile folder2 = new Folder("foder2");
+            //    AbstractFile folder3 = new Folder("foder3");
+
+            //    AbstractFile file1 = new TextFile("file1");
+            //    AbstractFile file2 = new TextFile("file2");
+            //    AbstractFile file3 = new ImgFile("file3");
+            //    AbstractFile file4 = new ImgFile("file4");
+
+            //    folder1.Add(folder2);
+            //    folder1.Add(folder3);
+            //    folder2.Add(file1);
+            //    folder2.Add(file2);
+            //    folder3.Add(file3);
+            //    folder3.Add(file4);
+
+            //    //执行
+            //    folder1.KillVirus();
+            //}
+
+            //{
+            //    Console.WriteLine("-------------组合模式 V2 透明组合模式 文件夹/文件杀毒-------------");
+            //    DesignPatternsDemo.Structural.组合模式.透明组合模式.AbstractFile folder1 = new DesignPatternsDemo.Structural.组合模式.透明组合模式.Folder("foder1");
+            //    DesignPatternsDemo.Structural.组合模式.透明组合模式.AbstractFile folder2 = new DesignPatternsDemo.Structural.组合模式.透明组合模式.Folder("foder2");
+            //    DesignPatternsDemo.Structural.组合模式.透明组合模式.AbstractFile folder3 = new DesignPatternsDemo.Structural.组合模式.透明组合模式.Folder("foder3");
+
+            //    DesignPatternsDemo.Structural.组合模式.透明组合模式.AbstractFile file1 = new DesignPatternsDemo.Structural.组合模式.透明组合模式.LeafNode.TextFile("file1");
+            //    DesignPatternsDemo.Structural.组合模式.透明组合模式.AbstractFile file2 = new DesignPatternsDemo.Structural.组合模式.透明组合模式.LeafNode.TextFile("file2");
+            //    DesignPatternsDemo.Structural.组合模式.透明组合模式.AbstractFile file3 = new DesignPatternsDemo.Structural.组合模式.透明组合模式.LeafNode.ImgFile("file3");
+            //    DesignPatternsDemo.Structural.组合模式.透明组合模式.AbstractFile file4 = new DesignPatternsDemo.Structural.组合模式.透明组合模式.LeafNode.ImgFile("file4");
+
+            //    folder1.Add(folder2);
+            //    folder1.Add(folder3);
+            //    folder2.Add(file1);
+            //    folder2.Add(file2);
+            //    folder3.Add(file3);
+            //    folder3.Add(file4);
+
+            //    //执行
+            //    folder1.KillVirus();
+            //}
+
+            //{
+            //    Console.WriteLine("-------------组合模式 V3 安全组合模式 文件夹/文件杀毒-------------");
+            //    DesignPatternsDemo.Structural.组合模式.安全组合模式.Folder folder1 = new DesignPatternsDemo.Structural.组合模式.安全组合模式.Folder("foder1");
+            //    DesignPatternsDemo.Structural.组合模式.安全组合模式.Folder folder2 = new DesignPatternsDemo.Structural.组合模式.安全组合模式.Folder("foder2");
+            //    DesignPatternsDemo.Structural.组合模式.安全组合模式.Folder folder3 = new DesignPatternsDemo.Structural.组合模式.安全组合模式.Folder("foder3");
+
+            //    DesignPatternsDemo.Structural.组合模式.安全组合模式.AbstractFile file1 = new DesignPatternsDemo.Structural.组合模式.安全组合模式.LeafNode.TextFile("file1");
+            //    DesignPatternsDemo.Structural.组合模式.安全组合模式.AbstractFile file2 = new DesignPatternsDemo.Structural.组合模式.安全组合模式.LeafNode.TextFile("file2");
+            //    DesignPatternsDemo.Structural.组合模式.安全组合模式.AbstractFile file3 = new DesignPatternsDemo.Structural.组合模式.安全组合模式.LeafNode.ImgFile("file3");
+            //    DesignPatternsDemo.Structural.组合模式.安全组合模式.AbstractFile file4 = new DesignPatternsDemo.Structural.组合模式.安全组合模式.LeafNode.ImgFile("file4");
+
+            //    folder1.Add(folder2);//folder 自身方法
+            //    folder1.Add(folder3);//folder 自身方法
+            //    folder2.Add(file1);//folder 自身方法
+            //    folder2.Add(file2);//folder 自身方法
+            //    folder3.Add(file3);//folder 自身方法
+            //    folder3.Add(file4);//folder 自身方法
+
+            //    //执行
+            //    folder1.KillVirus();//公共方法
+            //}
+
+            #endregion 组合模式
 
             #endregion Structural
 
