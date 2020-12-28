@@ -12,6 +12,9 @@ using DesignPatternsDemo.Creational.建造者模式.V2;
 using DesignPatternsDemo.Behavioral.责任链.Model;
 using DesignPatternsDemo.Behavioral.责任链.V1;
 using DesignPatternsDemo.Behavioral.责任链.V2;
+using DesignPatternsDemo.Structural.桥接模式.V1.Bridge;
+using DesignPatternsDemo.Structural.桥接模式.V1.PlatformInterface;
+using DesignPatternsDemo.Structural.桥接模式.V2.Color;
 using DesignPatternsDemo.Utility;
 using ActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.ActorBuilder;
 using AngelActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.AngelActorBuilder;
@@ -328,7 +331,7 @@ namespace DesignPatternsDemo
             //    Console.WriteLine("-------------适配器模式 V4 缺省适配器-------------");
             //    // target 方法较多，但并非全都需要，定义AbstractAdapter使用默认实现所有方法
             //    // 定义adapter类继承AbstractAdapter类，覆写需要的方法
-                
+
             //    //被适配的对象
             //    Structural.适配器模式.缺省适配器模式.Adaptee adaptee = new Structural.适配器模式.缺省适配器模式.Adaptee();
             //    //适配器
@@ -338,6 +341,38 @@ namespace DesignPatternsDemo
             //}
             #endregion 适配器模式
 
+            #region 桥接模式
+            //{
+            //    Console.WriteLine("-------------桥接模式 V1 图片显示-------------");
+            //    var platformName = ConfigProvider.GetConfigString("Structural:Bridge:V1:Platform");
+            //    var platformType = "DesignPatternsDemo.Structural.桥接模式.V1.PlatformInterface." + platformName;
+            //    var platform = Activator.CreateInstance(Type.GetType(platformType)) as IPlantformImageImp;
+
+            //    var imageTypeName = ConfigProvider.GetConfigString("Structural:Bridge:V1:ImageType");
+            //    var imageTypeType = "DesignPatternsDemo.Structural.桥接模式.V1.Bridge." + imageTypeName;
+            //    var image = Activator.CreateInstance(Type.GetType(imageTypeType)) as Image;
+
+            //    image.SetImageImp(platform);
+            //    image.ParseFile("tempPath");
+            //}
+
+            //{
+            //    Console.WriteLine("-------------桥接模式 V2 字号及颜色-------------");
+            //    var colorName = ConfigProvider.GetConfigString("Structural:Bridge:V2:Color");
+            //    var colorType = "DesignPatternsDemo.Structural.桥接模式.V2.Color." + colorName;
+            //    using (var color = Activator.CreateInstance(Type.GetType(colorType)) as IColor)
+            //    {
+            //        var penName = ConfigProvider.GetConfigString("Structural:Bridge:V2:Pen");
+            //        var penType = "DesignPatternsDemo.Structural.桥接模式.V2.Pen." + penName;
+            //        var pen = Activator.CreateInstance(Type.GetType(penType)) as Structural.桥接模式.V2.Pen.AbstractPen;
+
+            //        pen.SetColor(color);
+            //        pen.Draw();
+            //    }
+
+            //    Console.WriteLine("test normal color");
+            //}
+            #endregion  桥接模式
 
             #endregion Structural
 

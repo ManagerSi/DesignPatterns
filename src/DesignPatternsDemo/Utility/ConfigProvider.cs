@@ -16,9 +16,9 @@ namespace DesignPatternsDemo.Utility
         {
             if (string.IsNullOrWhiteSpace(path)) return null;
 
-            if (string.IsNullOrWhiteSpace(filePath))
+            if (!string.IsNullOrWhiteSpace(filePath))
             {
-                IConfigurationBuilder builder = new ConfigurationBuilder().AddJsonFile("appsettings.json");
+                IConfigurationBuilder builder = new ConfigurationBuilder().AddJsonFile(filePath);
                 var configuration = builder.Build();
                 return configuration.GetSection(path).Value.ToString();
             }
