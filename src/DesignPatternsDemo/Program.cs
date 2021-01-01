@@ -22,6 +22,8 @@ using DevilActorBuilder = DesignPatternsDemo.Creational.建造者模式.V1.Devil
 using DesignPatternsDemo.Structural.适配器模式.对象适配器模式;
 using DesignPatternsDemo.Structural.组合模式.V1;
 using DesignPatternsDemo.Structural.组合模式.V1.LeafNode;
+using DesignPatternsDemo.Structural.装饰模式.透明装饰模式.Component;
+using DesignPatternsDemo.Structural.装饰模式.透明装饰模式;
 
 namespace DesignPatternsDemo
 {
@@ -445,6 +447,38 @@ namespace DesignPatternsDemo
             //}
 
             #endregion 组合模式
+
+            #region 装饰模式
+            {
+                Console.WriteLine("-------------装饰模式 V1 透明装饰模式-------------");
+                DesignPatternsDemo.Structural.装饰模式.透明装饰模式.Component.Component c1, c2, c3, c4;//全部使用抽象基类定义
+                c1 = new ListBox();
+                c2 = new Window();
+                Console.WriteLine("----原有显示-------------");
+                c1.Display();
+                c2.Display();
+
+                Console.WriteLine("----增加透明装饰模式(无限嵌套)-------------");
+                c3 = new BlackBorderDecorator(c1);
+                c4 = new ScrollBarDecorator(c3);//将装饰后的对象继续注入另一个装饰器中
+                c4.Display();
+            }
+            {
+                Console.WriteLine("-------------装饰模式 V2 半透明装饰模式-------------");
+                DesignPatternsDemo.Structural.装饰模式.透明装饰模式.Component.Component c1; //使用抽象基类定义
+                c1 = new ListBox(); //具体子类实现
+
+                DesignPatternsDemo.Structural.装饰模式.半透明装饰模式.ScrollBarDecorator c3; //直接使用具体装饰器定义实现
+                c3 = new DesignPatternsDemo.Structural.装饰模式.半透明装饰模式.ScrollBarDecorator(c1);
+                c3.Display(); //调用原有业务
+                c3.CloseWindow();//调用自身业务（所以需要直接声明本类才能调用）
+            }
+            #endregion 装饰模式
+
+            #region 外观模式
+
+            #endregion 外观模式
+
 
             #endregion Structural
 
