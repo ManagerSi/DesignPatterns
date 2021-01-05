@@ -25,6 +25,8 @@ using DesignPatternsDemo.Structural.组合模式.V1;
 using DesignPatternsDemo.Structural.组合模式.V1.LeafNode;
 using DesignPatternsDemo.Structural.装饰模式.透明装饰模式.Component;
 using DesignPatternsDemo.Structural.装饰模式.透明装饰模式;
+using DesignPatternsDemo.Structural.享元模式.V1;
+using DesignPatternsDemo.Structural.享元模式.V2;
 
 namespace DesignPatternsDemo
 {
@@ -496,6 +498,29 @@ namespace DesignPatternsDemo
             //}
             #endregion 外观模式
 
+            #region 享元模式
+            //{
+            //    Console.WriteLine("-------------享元模式 V1 --------------------");
+            //    FlyweightFactory ff = new FlyweightFactory();
+            //    var flyweight = ff.GetFlyweight("1");
+            //    flyweight.ShowState("2");
+            //}
+
+            //{
+            //    Console.WriteLine("-------------享元模式 V2 --------------------");
+            //    IgoChessmanFactory ff = IgoChessmanFactory.GetInstance;
+            //    var igo1 = ff.GetIgoChessman("b");
+            //    var igo2 = ff.GetIgoChessman("b");
+            //    var igo3 = ff.GetIgoChessman("w");
+            //    var igo4 = ff.GetIgoChessman("w");
+            //    Console.WriteLine($"igo1 == igo2: {igo1 == igo2}");
+            //    Console.WriteLine($"igo3 == igo4: {igo3 == igo4}");
+            //    igo1.Display(new Coordinates(1,2));
+            //    igo2.Display(new Coordinates(3,4));
+            //    igo3.Display(new Coordinates(2,1));
+            //    igo4.Display(new Coordinates(2, 2));
+            //}
+            #endregion 享元模式
 
             #endregion Structural
 
