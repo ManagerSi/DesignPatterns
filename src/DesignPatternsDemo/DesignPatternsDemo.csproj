@@ -17,4 +17,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Behavioral\命令模式\V4\" />
+  </ItemGroup>
+
 </Project>

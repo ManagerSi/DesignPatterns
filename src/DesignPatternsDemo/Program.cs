@@ -27,6 +27,7 @@ using DesignPatternsDemo.Structural.装饰模式.透明装饰模式.Component;
 using DesignPatternsDemo.Structural.装饰模式.透明装饰模式;
 using DesignPatternsDemo.Structural.享元模式.V1;
 using DesignPatternsDemo.Structural.享元模式.V2;
+using DesignPatternsDemo.Behavioral.命令模式.V1;
 
 namespace DesignPatternsDemo
 {
@@ -64,6 +65,7 @@ namespace DesignPatternsDemo
 
             //    director.Handle(request);
             //}
+
             ////责任链--接口
             //{
             //    Console.WriteLine("-------------使用责任链--抽象类方式-----------");
@@ -80,6 +82,66 @@ namespace DesignPatternsDemo
             //}
 
             #endregion 责任链
+
+            #region 命令模式
+            //将请求的发送者和接收者解耦
+            //
+            //{
+            //    Console.WriteLine("-------------命令模式 V1基础版-------------");
+            //    var command = new ConcreteCommand();
+            //    var client = new Client(command);
+            //    client.Call();
+            //}
+
+            //{
+            //    Console.WriteLine("-------------命令模式 V2窗体功能示例-------------");
+            //    var command1 = new DesignPatternsDemo.Behavioral.命令模式.V2.Commands.HelperCommand();
+            //    var command2 = new DesignPatternsDemo.Behavioral.命令模式.V2.Commands.MinimizeCommand();
+
+            //    var button1 = new DesignPatternsDemo.Behavioral.命令模式.V2.Client.FunctionButton("帮助文档");
+            //    button1.SetCommand(command1);
+            //    var button2 = new DesignPatternsDemo.Behavioral.命令模式.V2.Client.FunctionButton("最小化窗体");
+            //    button2.SetCommand(command2);
+
+            //    var settingWindows = new DesignPatternsDemo.Behavioral.命令模式.V2.Client.SettingWindow();
+            //    settingWindows.AddButton(button1);
+            //    settingWindows.AddButton(button2);
+            //    settingWindows.Display();
+
+            //    Console.WriteLine("--------------------------");
+            //    //手动模拟触发click
+            //    button1.Click();
+            //    button2.Click();
+            //}
+
+            {
+                Console.WriteLine("-------------命令模式 V3撤销操作-------------");
+                var command = new DesignPatternsDemo.Behavioral.命令模式.V3.AddCommand();
+                var form = new DesignPatternsDemo.Behavioral.命令模式.V3.CalculatorForm();
+                form.SetCommnad(command);
+
+                form.Compute(1);
+                form.Compute(2);
+                form.Compute(3);
+
+                form.Undo();
+                form.Undo();
+                form.Undo();
+                form.Undo();
+
+                form.Redo();
+                form.Redo();
+
+                form.Compute(5);
+                form.Redo();
+                form.Undo();
+            }
+
+            {
+                Console.WriteLine("-------------命令模式 V4命令队列-------------");
+
+            }
+            #endregion 命令模式
 
             #endregion Behavioral
 
