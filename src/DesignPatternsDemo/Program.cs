@@ -114,33 +114,42 @@ namespace DesignPatternsDemo
             //    button2.Click();
             //}
 
-            {
-                Console.WriteLine("-------------命令模式 V3撤销操作-------------");
-                var command = new DesignPatternsDemo.Behavioral.命令模式.V3.AddCommand();
-                var form = new DesignPatternsDemo.Behavioral.命令模式.V3.CalculatorForm();
-                form.SetCommnad(command);
+            //{
+            //    Console.WriteLine("-------------命令模式 V3撤销操作-------------");
+            //    var command = new DesignPatternsDemo.Behavioral.命令模式.V3.AddCommand();
+            //    var form = new DesignPatternsDemo.Behavioral.命令模式.V3.CalculatorForm();
+            //    form.SetCommnad(command);
 
-                form.Compute(1);
-                form.Compute(2);
-                form.Compute(3);
+            //    form.Compute(1);
+            //    form.Compute(2);
+            //    form.Compute(3);
 
-                form.Undo();
-                form.Undo();
-                form.Undo();
-                form.Undo();
+            //    form.Undo();
+            //    form.Undo();
+            //    form.Undo();
+            //    form.Undo();
 
-                form.Redo();
-                form.Redo();
+            //    form.Redo();
+            //    form.Redo();
 
-                form.Compute(5);
-                form.Redo();
-                form.Undo();
-            }
+            //    form.Compute(5);
+            //    form.Redo();
+            //    form.Undo();
+            //}
 
-            {
-                Console.WriteLine("-------------命令模式 V4命令队列-------------");
+            //{
+            //    Console.WriteLine("-------------命令模式 V4命令队列-------------");
+            //    DesignPatternsDemo.Behavioral.命令模式.V4.AbstractCommand command1 = new DesignPatternsDemo.Behavioral.命令模式.V4.Handler1Command();
+            //    DesignPatternsDemo.Behavioral.命令模式.V4.AbstractCommand command2 = new DesignPatternsDemo.Behavioral.命令模式.V4.Handler2Command();
+            //    DesignPatternsDemo.Behavioral.命令模式.V4.AbstractCommand command3 = new DesignPatternsDemo.Behavioral.命令模式.V4.Handler3Command();
 
-            }
+            //    DesignPatternsDemo.Behavioral.命令模式.V4.Client client = new DesignPatternsDemo.Behavioral.命令模式.V4.Client();
+            //    client.SetCommand(command1);
+            //    client.SetCommand(command2);
+            //    client.SetCommand(command3);
+
+            //    client.Call();
+            //}
             #endregion 命令模式
 
             #endregion Behavioral
