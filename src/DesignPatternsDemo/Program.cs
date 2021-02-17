@@ -28,6 +28,7 @@ using DesignPatternsDemo.Structural.装饰模式.透明装饰模式;
 using DesignPatternsDemo.Structural.享元模式.V1;
 using DesignPatternsDemo.Structural.享元模式.V2;
 using DesignPatternsDemo.Behavioral.命令模式.V1;
+using DesignPatternsDemo.Behavioral.解释器模式.V1;
 
 namespace DesignPatternsDemo
 {
@@ -151,6 +152,23 @@ namespace DesignPatternsDemo
             //    client.Call();
             //}
             #endregion 命令模式
+
+            #region 解释器模式
+            //{
+            //    Console.WriteLine("-------------解释器模式 V1 自己写的-------------");
+            //    ExpressionContext ec = new ExpressionContext();
+            //    ec.Input = "left run 10 and down walk 20";
+
+            //    Console.WriteLine("-------------TerminalExpression: left run 10 -------------");
+            //    AbstractExpression terminalExpression = new TerminalExpression("left", "10","run");
+            //    terminalExpression.Interpreter(ec);
+
+            //    Console.WriteLine("-------------ComplexExpression: left run 10 and down walk 20 -------------");
+            //    AbstractExpression nonterminal = new NonterminalExpression(ec.Input);
+            //    nonterminal.Interpreter(ec);
+            //}
+
+            #endregion 解释器模式
 
             #endregion Behavioral
 
