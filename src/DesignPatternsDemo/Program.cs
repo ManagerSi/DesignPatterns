@@ -29,6 +29,7 @@ using DesignPatternsDemo.Structural.享元模式.V1;
 using DesignPatternsDemo.Structural.享元模式.V2;
 using DesignPatternsDemo.Behavioral.命令模式.V1;
 using DesignPatternsDemo.Behavioral.解释器模式.V1;
+using DesignPatternsDemo.Behavioral.解释器模式.V2;
 
 namespace DesignPatternsDemo
 {
@@ -168,6 +169,12 @@ namespace DesignPatternsDemo
             //    nonterminal.Interpreter(ec);
             //}
 
+            //{
+            //    Console.WriteLine("-------------解释器模式 V2 -------------");
+            //    var ec = new InstructionHandler();
+            //    ec.Handle("left run 10 and down walk 20 and right run 15");
+            //    Console.WriteLine(ec.Output());
+            //}
             #endregion 解释器模式
 
             #endregion Behavioral
