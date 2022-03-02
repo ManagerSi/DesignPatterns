@@ -59,7 +59,7 @@ Project : Design Patterns Examples in C#
 装饰模式（Decorator Pattern）：动态的给对象添加新的功能。
 > Attach additional responsibilities to an object dynamically keeping the same interface.Decorators provide a flexible alternative to subclassing for extending functionality.（动态地给一个对象添加一些额外的职责。就增加功能来说，装饰模式相比生成子类更为灵活。）
 
-代理模式：为其他对象提供一个代理以便控制这个对象的访问。
+代理模式（Proxy pattern）：为其他对象提供一个代理以便控制这个对象的访问。
 
 
 亨元（蝇量）模式（Flyweight Pattern）：通过共享技术来有效的支持大量细粒度的对象。
@@ -70,7 +70,7 @@ Project : Design Patterns Examples in C#
 桥接模式（Bridge Pattern）：将抽象部分和它的实现部分分离，使它们都可以独立的变化。
 > Decouple an abstraction from its implementation so that the two can vary independently.（将抽象和实现解耦，使得两者可以独立的变化。）
 
- 
+
 ## 行为型模式
 模板模式（Template Method Pattern）：定义一个算法结构，而将一些步骤延迟到子类实现。
 > Define the skeleton of an algorithm in an operation,deferring some steps to subclasses.Template Method lets subclass redefine certain steps of an algorithm without changing the algorithm's structure. （定义一个操作中的算法框架，而将一些步骤延迟到子类中。使得子类可以不改变一个算法的结构即可以重定义该算法的某些特定步骤。）
